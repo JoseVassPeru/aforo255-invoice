@@ -1,0 +1,5 @@
+FROM openjdk:13
+VOLUME /temp
+EXPOSE 8050
+ADD ./build/libs/AFORO255.MS.TEST.Invoice-0.0.1-SNAPSHOT.jar  invoice-server.jar
+ENTRYPOINT ["java", "-jar", "/invoice-server.jar"]
